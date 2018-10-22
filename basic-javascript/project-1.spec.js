@@ -155,7 +155,146 @@ describe('project-1.js', () => {
         })
     })
 
+    describe('square()', () => {
 
-    
-    
+        it('should return the square of the given value', () => {
+            const expected = 4;
+            
+            const actual = helpers.square(2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('cube()', () => {
+
+        it('should return the cubed value of the given value', () => {
+            const expected = 8;
+            
+            const actual = helpers.cube(2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('raiseToPower()', () => {
+
+        it('should return num value to the power of exponent value', () => {
+            const expected = 8;
+            
+            const actual = helpers.raiseToPower(2, 3);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('roundNumber()', () => {
+
+        it('should round the given number', () => {
+            const expected = 1;
+            
+            const actual = helpers.roundNumber(1.2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('roundUp()', () => {
+
+        it('should round up the given number', () => {
+            const expected = 2;
+            
+            const actual = helpers.roundUp(1.2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('addExclamationPoint()', () => {
+
+        it('should add an exclamation point to the end of the given string', () => {
+            const expected = "Hello!";
+            
+            const actual = helpers.addExclamationPoint("Hello");
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('addExclamationPoint()', () => {
+
+        it('should add an exclamation point to the end of the given string', () => {
+            const expected = "Hello!";
+            
+            const actual = helpers.addExclamationPoint("Hello");
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('combineNames()', () => {
+
+        it('should concatenate the given strings', () => {
+            const expected = "First Name";
+            
+            const actual = helpers.combineNames("First", "Name");
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('getGreeting()', () => {
+
+        it('should return -Hello (name var)!-', () => {
+            const expected = "Hello name!";
+            
+            const actual = helpers.getGreeting("name");
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('getRectangleArea()', () => {
+
+        it('should return length * width', () => {
+            const expected = 6;
+            
+            const actual = helpers.getRectangleArea(3, 2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('getTriangleArea()', () => {
+
+        it('should return .5 * base * height', () => {
+            const expected = 1;
+            
+            const actual = helpers.getTriangleArea(1, 2);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('getCircleArea()', () => {
+
+        it('should return Math.PI * radius * radius', () => {
+            const expected = 28.274333882308138;
+            
+            const actual = helpers.getCircleArea(3);
+
+            expect(actual).toEqual(expected);
+        })
+    })
+
+    describe('getRectangularPrismVolume()', () => {
+
+        it('should return width * height * length', () => {
+            const expected = 6;
+            
+            const actual = helpers.getRectangularPrismVolume(1, 2, 3);
+
+            expect(actual).toEqual(expected);
+        })
+    })
 });
