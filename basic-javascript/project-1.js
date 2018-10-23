@@ -1,87 +1,175 @@
 /* eslint-disable arrow-parens */
 
 const multiplyByTen = num => {
-  return num * 10;
+  if (!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Provided value must be a number.')
+  } else return num * 10;
 };
 
 const subtractFive = num => {
-  return num - 5;
+  if (!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Provided value must be a number.')
+  } else return num - 5;
 };
 
 const areSameLength = (str1, str2) => {
-  return str1.length === str2.length;
+  if (!str1 || !str2) {
+    return null;
+  } else if (typeof str1 !== 'string') {
+    throw new Error('str1 must be strings.')
+  } else if (typeof str2 !== 'string') {
+    throw new Error('str2 must be strings.')
+  } else if(str1 == true || str1 == false ) {
+    throw new Error('str1 is a bool.')
+  } else if(str2 == true || str2 == false) {
+    throw new Error('str2 is a bool.')
+  } else if(str1.length !== str2.length) {
+    return false;
+  } else return true;
 };
 
 const areEqual = (x, y) => {
-  return x === y;
+  if(!x || !y) {
+    return null;
+  } else if(x !== y) {
+    return false;
+  } else return true;
 };
 
 const lessThanNinety = num => {
-  if (num < 90) {
-    return true;
-  }
-  return false;
+  if (!num) {
+    return null;
+  } else if (num > 90) {
+    return false;
+  } else if (typeof num !== 'number') {
+    throw new Error('Provided value must be a number.')
+  } else return true;
 };
 
 const greaterThanFifty = num => {
-  if (num > 50) {
-    return true;
-  }
-  return false;
+  if (!num) {
+    return null;
+  } else if (num < 50) {
+    return false;
+  } else if (typeof num !== 'number') {
+    throw new Error('Provided value must be a number.')
+  } else return true;
 };
 
 const add = (x, y) => {
-  return x + y;
+  if(!x || !y) {
+    return null;
+  } else if (typeof x !== 'number') {
+    throw new Error('X value must be a number.')
+  } else if (typeof y !== 'number') {
+    throw new Error('Y value must be a number.')
+  } else return x + y;
 };
 
 const subtract = (x, y) => {
-  return x - y;
+  if(!x || !y) {
+    return null;
+  } else if (typeof x !== 'number') {
+    throw new Error('X value must be a number.')
+  } else if (typeof y !== 'number') {
+    throw new Error('Y value must be a number.')
+  } else return x - y;
 };
 
 const divide = (x, y) => {
-  return x / y;
+  if(!x || !y) {
+    return null;
+  } else if (typeof x !== 'number') {
+    throw new Error('X value must be a number.')
+  } else if (typeof y !== 'number') {
+    throw new Error('Y value must be a number.')
+  } else return x / y;
 };
 
 const multiply = (x, y) => {
-  return x * y;
+  if(!x || !y) {
+    return null;
+  } else if (typeof x !== 'number') {
+    throw new Error('X value must be a number.')
+  } else if (typeof y !== 'number') {
+    throw new Error('Y value must be a number.')
+  } else return x * y;
 };
 
 const getRemainder = (x, y) => {
-  return x % y;
+  if(!x || !y) {
+    return null;
+  } else if (typeof x !== 'number') {
+    throw new Error('X value must be a number.')
+  } else if (typeof y !== 'number') {
+    throw new Error('Y value must be a number.')
+  } else return x % y;
 };
 
 const isEven = num => {
-  if (num % 2 === 0) {
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else if (num % 2 === 0) {
     return true;
-  }
-  return false;
+  } else return false;
 };
 
 const isOdd = num => {
-  if (num % 2 === 0) {
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else if (num % 2 === 0) {
     return false;
-  }
-  return true;
+  } else return true;
 };
 
 const square = num => {
-  return num * num;
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else return num * num;
 };
 
 const cube = num => {
-  return num * num * num;
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else  return num * num * num;
 };
 
 const raiseToPower = (num, exponent) => {
-  return num ** exponent;
+  if(!num || !exponent) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Num value must be a number.')
+  } else if (typeof exponent !== 'number') {
+    throw new Error('Exponent value must be a number.')
+  } else return num ** exponent;
 };
 
 const roundNumber = num => {
-  return Math.round(num);
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else return Math.round(num);
 };
 
 const roundUp = num => {
-  return Math.ceil(num);
+  if(!num) {
+    return null;
+  } else if (typeof num !== 'number') {
+    throw new Error('Given value must be a number.')
+  } else return Math.ceil(num);
 };
 
 const addExclamationPoint = str => {
@@ -97,19 +185,43 @@ const getGreeting = name => {
 };
 
 const getRectangleArea = (length, width) => {
-  return length * width;
+  if(!length || !width) {
+    return null;
+  } else if (typeof length !== 'number') {
+    throw new Error('length value must be a number.')
+  } else if (typeof width !== 'number') {
+    throw new Error('width value must be a number.')
+  } else return length * width;
 };
 
 const getTriangleArea = (base, height) => {
-  return 0.5 * base * height;
+  if(!base || !height) {
+    return null;
+  } else if (typeof base !== 'number') {
+    throw new Error('base value must be a number.')
+  } else if (typeof height !== 'number') {
+    throw new Error('height value must be a number.')
+  } else return 0.5 * base * height;
 };
 
 const getCircleArea = radius => {
-  return Math.PI * radius * radius;
+  if(!radius) {
+    return null;
+  } else if (typeof radius !== 'number') {
+    throw new Error('radius value must be a number.')
+  } else return Math.PI * radius * radius;
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
-  return width * height * length;
+  if(!length || !width || !height) {
+    return null;
+  } else if (typeof length !== 'number') {
+    throw new Error('length value must be a number.')
+  } else if (typeof width !== 'number') {
+    throw new Error('width value must be a number.')
+  } else if (typeof height !== 'number') {
+    throw new Error('height value must be a number.')
+  } else return width * height * length;
 };
 
 module.exports = {
