@@ -145,7 +145,7 @@ describe('project-1.js', () => {
         describe('wrong inputs', () => {
 
             // it('should throw error if input is bool', () => {
-            //     const actual = () => { helpers.areSameLength('mememan', false) };
+            //     const actual = () => { helpers.areSameLength('mememan', true) };
 
             //     expect(actual).toThrow();
             // });

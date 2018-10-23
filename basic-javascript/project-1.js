@@ -23,10 +23,6 @@ const areSameLength = (str1, str2) => {
     throw new Error('str1 must be strings.')
   } else if (typeof str2 !== 'string') {
     throw new Error('str2 must be strings.')
-  } else if(str1 == true || str1 == false ) {
-    throw new Error('str1 is a bool.')
-  } else if(str2 == true || str2 == false) {
-    throw new Error('str2 is a bool.')
   } else if(str1.length !== str2.length) {
     return false;
   } else return true;
