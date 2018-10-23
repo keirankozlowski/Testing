@@ -300,11 +300,11 @@ describe('project-1.js', () => {
 
         describe('wrong inputs', () => {
 
-            // it('should throw error if input is bool', () => {
-            //     const actual = () => { helpers.greaterThanFifty(false) };
+            it('should throw error if input is bool', () => {
+                const actual = () => { helpers.greaterThanFifty(false) };
 
-            //     expect(actual).toThrow();
-            // });
+                expect(actual).toThrow();
+            });
 
             it('should throw error if input is string', () => {
 
@@ -1076,6 +1076,51 @@ describe('project-1.js', () => {
 
             expect(actual).toEqual(expected);
         });
+
+        it('should return null if no input is provided', () => {
+            let expected = null;
+
+            const actual = helpers.addExclamationPoint();
+
+            expect(actual).toBe(expected);
+        });
+
+        describe('wrong inputs', () => {
+
+            it('should throw error if input is bool', () => {
+                const actual = () => { helpers.addExclamationPoint(true) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is number', () => {
+
+                const actual = () => { helpers.addExclamationPoint(1) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is array', () => {
+
+                const actual = () => { helpers.addExclamationPoint(['hi', 'meme']) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is object', () => {
+
+                const actual = () => { helpers.addExclamationPoint({ number: 422 }) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is function', () => {
+
+                const actual = () => { helpers.addExclamationPoint(() => 423) };
+
+                expect(actual).toThrow();
+            });
+        });
     });
 
     describe('combineNames()', () => {
@@ -1087,6 +1132,59 @@ describe('project-1.js', () => {
 
             expect(actual).toEqual(expected);
         });
+
+        it('should return null if only one input is provided', () => {
+            let expected = null;
+
+            const actual = helpers.combineNames('first');
+
+            expect(actual).toBe(expected);
+        });
+
+        it('should return null if no input is provided', () => {
+            let expected = null;
+
+            const actual = helpers.combineNames();
+
+            expect(actual).toBe(expected);
+        });
+
+        describe('wrong inputs', () => {
+
+            it('should throw error if input is bool', () => {
+                const actual = () => { helpers.combineNames(1, true) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is number', () => {
+
+                const actual = () => { helpers.combineNames(1, 'meme') };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is array', () => {
+
+                const actual = () => { helpers.combineNames(['hi', 'meme'], 'meme') };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is object', () => {
+
+                const actual = () => { helpers.combineNames({ number: 422 }, 'meme') };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is function', () => {
+
+                const actual = () => { helpers.combineNames(() => 423, 'meme') };
+
+                expect(actual).toThrow();
+            });
+        });
     });
 
     describe('getGreeting()', () => {
@@ -1094,9 +1192,54 @@ describe('project-1.js', () => {
         it('should return -Hello (name var)!-', () => {
             const expected = "Hello name!";
 
-            const actual = helpers.getGreeting("name");
+            const actual = helpers.getGreeting('name');
 
             expect(actual).toEqual(expected);
+        });
+
+        it('should return null if no input is provided', () => {
+            let expected = null;
+
+            const actual = helpers.getGreeting();
+
+            expect(actual).toBe(expected);
+        });
+
+        describe('wrong inputs', () => {
+
+            it('should throw error if input is bool', () => {
+                const actual = () => { helpers.getGreeting(1, true) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is number', () => {
+
+                const actual = () => { helpers.getGreeting(1) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is array', () => {
+
+                const actual = () => { helpers.getGreeting([442, 6786, 899]) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is object', () => {
+
+                const actual = () => { helpers.getGreeting({ number: 422 }) };
+
+                expect(actual).toThrow();
+            });
+
+            it('should throw error if input is function', () => {
+
+                const actual = () => { helpers.getGreeting(() => 423) };
+
+                expect(actual).toThrow();
+            });
         });
     });
 

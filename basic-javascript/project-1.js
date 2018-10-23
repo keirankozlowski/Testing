@@ -173,15 +173,29 @@ const roundUp = num => {
 };
 
 const addExclamationPoint = str => {
-  return (str += '!');
+  if(!str) {
+    return null;
+  } else if (typeof str !== 'string') {
+    throw new Error('str value must be a number.')
+  } else return (str += '!');
 };
 
 const combineNames = (firstName, lastName) => {
-  return `${firstName} ${lastName}`;
+  if(!firstName || !lastName) {
+    return null;
+  } else if (typeof firstName !== 'string') {
+    throw new Error('name value must be a number.')
+  } else if (typeof lastName !== 'string') {
+    throw new Error('name value must be a number.')
+  } else return `${firstName} ${lastName}`;
 };
 
 const getGreeting = name => {
-  return `Hello ${name}!`;
+  if(!name) {
+    return null;
+  } else if (typeof name !== 'string') {
+    throw new Error('name value must be a number.')
+  } else return `Hello ${name}!`;
 };
 
 const getRectangleArea = (length, width) => {
